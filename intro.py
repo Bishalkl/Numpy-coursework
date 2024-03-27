@@ -53,11 +53,77 @@ d = {'1': "bishal"}
 
 e = np.array([[1,2,3],
              [d,1,6],
-             [4,7,6]])
+             [4,7,"Hello"]])
 
 print(e.dtype) #it will give object because it has object data within e variable
 
+print(e)
 
+#filling arrays
+
+# full function
+f = np.full((2,3,4), 9)
+print(f) #this allows to full the arrays of value accroding with user input 
+
+#zeros function, it is similar but with full of zeros in arrays.
+
+#ones function, it is similar but with full of 1's in arrays.
+
+#empty function, it is also similar but with with allocating the memory on it.
+
+# arange function , it is allows use to get a range value according to the user
+x_value = np.arange(0,50, 5)
+print(x_value)
+
+# linspace function, it allows and divided gap between range of number given.
+y_value = np.linspace(0, 500, 10)
+print(y_value)
+
+#nan and inf, it's mostly use when data set is null value 
+
+#nan
+print(np.isnan(np.nan)) # nan non number
+
+#inf
+print(np.isinf(np.inf)) #it is infinity
+
+
+#Mathmatical operation, while list will add as string but in numpy arrays do the operation according to vector and matricxs.
+l1 = [1,2,3,4,5]
+l2 = [3,4,5,6,7]
+
+a1 = np.array(l1)
+a2 = np.array(l2)
+
+print(l1 + l2) # output is [1, 2, 3, 4, 5, 3, 4, 5, 6, 7]
+print(a1 + a1) # output is [ 2  4  6  8 10]
+
+# operation in different dimension, under some condition if one of the dimension is similar
+
+# sqrt, it will allows to squre the number in numpyarrays
+l3 = np.array([1,2,3,4,5])
+
+# some important function
+print(np.sqrt(l3))
+print(np.sin(l3))
+print(np.cos(l3))
+print(np.log10(l3))
+
+
+#Array method
+print(np.append(l3,[1,2,3])) # it will append value according the user how we arange that.
+print(np.insert(l3,2,[1,2,3])) # it will insert the value according to the index address.
+print(np.delete(l3,1)) # it will delete value according to the index we given, we can also use in multiple column with multiple index according the arrangement in function
+
+
+
+
+
+
+
+
+
+ 
 
 
 
