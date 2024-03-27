@@ -41,3 +41,32 @@ print(a_mul.size)  # Output is 9
 
 # Checking the data type of elements
 print(a_mul.dtype)  # Output is int64
+
+# data type 
+b = np.array([[1,2,3],
+              ["3",1,"5"],
+              [7,8,9]], dtype=np.float32) #we can cast datatype
+
+print(b.dtype) # output is <u21 mean it is a mixed data type even we access seperately it will say string datatype
+
+d = {'1': "bishal"}
+
+e = np.array([[1,2,3],
+             [d,1,6],
+             [4,7,6]])
+
+print(e.dtype) #it will give object because it has object data within e variable
+
+
+
+
+
+
+
+
+
+
+
+
+
+
