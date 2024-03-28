@@ -115,6 +115,69 @@ print(np.append(l3,[1,2,3])) # it will append value according the user how we ar
 print(np.insert(l3,2,[1,2,3])) # it will insert the value according to the index address.
 print(np.delete(l3,1)) # it will delete value according to the index we given, we can also use in multiple column with multiple index according the arrangement in function
 
+#structuring method, this method able to changee the shape 
+l4 = np.array([[1,2,3,4,7],
+               [2,3,4,6,7],
+               [2,4,6,2,6],
+               [2,3,3,6,6]])
+
+print(l4.shape)
+
+import numpy as np
+
+# Original array
+l4 = np.array([[1,2,3,4,7],
+               [2,3,4,6,7],
+               [2,4,6,2,6],
+               [2,3,3,6,6]])
+
+# Displaying the shape of the array
+print(l4.shape)  # Output: (4, 5)
+
+# Reshaping the array
+# Reshape function - we can only reshape according to the available values; 
+# we can't reshape to a shape that is not compatible with the original number of elements
+print(l4.reshape((1,1,1,1,2,10)))  
+
+# Flatten the array
+print(l4.flatten())  # Output: [1 2 3 4 7 2 3 4 6 7 2 4 6 2 6 2 3 3 6 6]
+
+# Loop through flattened array
+var = [v for v in l4.flat]
+print(var)  # Output: [1, 2, 3, 4, 7, 2, 3, 4, 6, 7, 2, 4, 6, 2, 6, 2, 3, 3, 6, 6]
+
+# Transpose the array
+print(l4.T)
+
+# Swap axes of the array
+print(l4.swapaxes(0,1))  # Swap rows and columns
+
+
+# concatenating
+b1 = np.array([[1,2,3,4],
+               [3,4,5,7]])
+
+b2 = np.array([[1,2,3,0],
+               [3,4,5,1]])
+
+b3 = np.concatenate((b1,b2), axis=0)
+b4 = np.concatenate((b1,b2), axis=1)
+
+print(b3)
+print(b4)
+
+#stacking, it similar but in new dimension create
+b5 = np.stack((b1,b2))
+b6 = np.vstack((b1,b2)) # act like 0 axis of concatenate
+b7 = np.hstack((b1,b2)) # act like 1 axis of cocatenate
+print(b5)
+print(b6)
+print(b7)
+
+
+
+
+
 
 
 
