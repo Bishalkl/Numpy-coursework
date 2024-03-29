@@ -175,6 +175,49 @@ print(b6)
 print(b7)
 
 
+#split it is use to divide the single array in multiple 
+b8 = np.array([[1,2,3,4,6],
+               [2,3,4,5,7],
+               [5,4,3,6,5],
+               [7,5,3,6,8]])
+
+print(np.split(b8, 4, axis=0)) # it will divide the split in rows axis
+print(np.split(b8, 5, axis=1)) #it will divide the split in column axis
+
+#aggregate function
+print(b8.max())
+print(b8.min())
+print(b8.mean())
+print(b8.std())
+print(b8.sum())
+print(np.median(b8))
+
+#Numpy randoms
+b9 = np.random.randint(0, 1, size=(2,3,4))
+print(b9)
+b10 = np.random.binomial(10, p=0.5, size=(3,4))
+print(b10)
+b11 = np.random.choice([3,2], size=(5,10))
+print(b11)
+
+#Exporting and importing
+
+np.save("myarray.npy", b8)
+
+np.savetxt("myarray.csv", b8, delimiter=",")
+
+b12 = np.loadtxt("myarray.csv", delimiter=",")
+print(b12)
+
+
+
+
+
+
+
+
+
+
 
 
 
